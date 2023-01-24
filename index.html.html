@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <title>Document</title>
+    <style>
+        
+        *{
+    color: #ffffff;
+    font-family: 'Open Sans', 'icones', sans-serif;
+}
+@font-face {
+    font-family: 'icones';
+    src: url(icones.ttf);
+}
+
+body{
+    background-color: #1D232A;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1D232A;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.menu, .notificacao{
+    background: none;
+    color: white;
+    border: none;
+}
+
+.menu i::before{
+    content: "\e904";
+    font-size: 24px;
+}
+
+.notificacao i::before{
+    content: "\e906";
+    font-size: 24px;
+}
+
+.logo{
+    width: 40px;
+}
+
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    background-color: #15191C;
+    width: 75vw;
+    height: 100vh;
+    position: absolute;
+    left: -100vw;
+    transition: 0.25s;
+}
+
+.menu--ativo{
+    left: 0;
+    transition: 0.25s;
+}
+
+.logo-lateral{
+    align-self: center;
+    width: 118px;
+    padding: 16px;
+}
+
+
+.links{
+    text-decoration: none;
+    color: #95999C;
+    height: 64px;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.links::before{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
+}
+
+.links-inicio::before{
+    content: "\e902";
+}
+
+.links-video::before{
+    content: "\e90e";
+}
+
+.links-picos::before{
+    content: "\e909";
+}
+
+.links-integrantes::before{
+    content: "\e903";
+}
+
+.links-camisas::before{
+    content: "\e900";
+}
+
+.links-pinturas::before{
+    content: "\e90a";
+}
+
+.link--ativo:hover{
+    color: #ffffff;
+    padding-left: 56px;
+    border-left: 8px solid #ffffff;
+    transition: 0.25s;
+}
+
+.conteudo{
+    display: inline-block;
+    flex-direction: column;
+}
+
+.principal{
+    padding: 24px 16px;
+}
+
+.titulo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao{
+    width: 100%;
+    height: 594px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.banner{
+    width: 400px;
+    height: 300px;
+}
+
+.conteudo{
+    padding: 16px;
+}
+
+.cartao--titulo{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.perfil{
+    color: #95999C;
+    font-size: 0.9rem;
+}
+
+.info--cartao{
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.info--tempo::before{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.info--visualizacao::before{
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.btn-cartao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.btn--play::before{
+    content: "\e90b";
+    font-size: 24px;
+}
+
+.btn--destaque{
+    width: 300px;
+    height: 40px;
+    border: none;
+}
+
+.btn--destaque:hover{
+    background-color: #2793e6;
+    transition: 0.25s;
+}
+
+.btn--destaque::before{
+    margin-right: 8px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu"><i></i></button>
+        <img src="logo.svg" alt="logo" class="logo">
+        <button class="notificacao"><i></i></button>
+    </header>
+    <nav class="menu-lateral">
+        <img src="logo.svg" alt="logotipo" class="logo-lateral">
+        <a href="#" class="links links-inicio link--ativo">Inicio</a>
+        <a href="#" class="links links-video link--ativo">Videos</a>
+        <a href="#" class="links links-picos link--ativo">Picos</a>
+        <a href="#" class="links links-integrantes link--ativo">Integrantes</a>
+        <a href="#" class="links links-camisas link--ativo">Camisas</a>
+        <a href="#" class="links links-pinturas link--ativo">Pinturas</a>
+    </nav>
+    <main class="principal">
+        <h2 class="titulo">Inicio</h2>
+        <article class="cartao">
+            <img src="banner-mobile_1.png" alt="banner" class="banner">
+            <div class="conteudo">
+                <p class="destaque">Video em destaque</p>
+                <h3 class="cartao--titulo">HZC|TITULO</h3>
+                <p class="perfil">Caio de Azevedo</p>
+                <p class="info--cartao info--tempo">33 minutos</p>
+                <p class="info--cartao info--visualizacao">33 visualizações</p>
+                <button class="btn-cartao  btn--play btn--destaque">Assistir agora</button>
+            </div>
+        </article>
+    </main>
+    <script>
+        const botaomenu = document.querySelector('.menu')
+const menu = document.querySelector('.menu-lateral')
+
+botaomenu.addEventListener('click', () =>{
+    menu.classList.toggle('menu--ativo')
+})
+
+    </script>
+</body>
+</html>
